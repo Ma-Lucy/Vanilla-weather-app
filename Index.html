@@ -15,20 +15,26 @@
   <body>
     <div class="main-container">
       <header>
-        <form>
+        <form id="search-form">
           <input
             class="input-search-text"
+            id="input-search-text"
             type="search"
             placeholder="Enter a city.."
             required
           />
-          <input class="search-button" type="submit" value="Search" />
+          <input
+            class="search-button"
+            id="search-button"
+            type="submit"
+            value="Search"
+          />
         </form>
       </header>
       <main>
         <div class="main-data-container">
           <div class="city-description">
-            <h1>London</h1>
+            <h1 id="city">London</h1>
             <p>
               Wednesday 13:52, overcast clouds <br />
               Humidity: <span class="humidity">94%</span>, Wind:
@@ -61,5 +67,6 @@
         >
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
