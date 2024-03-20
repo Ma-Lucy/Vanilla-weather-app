@@ -7,8 +7,9 @@ function displayTemperatureFunction(response) {
   let windElement = document.querySelector("#wind");
   let dayTimeElement = document.querySelector("#day-and-time");
   let date = new Date(response.data.time * 1000);
-  console.log(date);
+  let iconElement = document.querySelector("#icon");
 
+  iconElement.innerHTML = `<img src ="${response.data.condition.icon_url}" class="emoji" />`;
   dayTimeElement.innerHTML = dayFunction(date);
   windElement.innerHTML = `${response.data.wind.speed} km/h`;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;

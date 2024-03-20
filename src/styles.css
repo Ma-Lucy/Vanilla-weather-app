@@ -74,13 +74,13 @@ footer a {
   display: flex;
 }
 .temp-unit {
-  font-size: 80px;
+  font-size: 88px;
   font-weight: 600;
   margin-left: 10px;
 }
 .emoji {
-  margin-top: 20px;
-  font-size: 40px;
+  width: 88px;
+  height: 88px;
 }
 .degrees-unit {
   margin-top: 15px;
