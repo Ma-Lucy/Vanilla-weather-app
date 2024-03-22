@@ -53,4 +53,32 @@ function citySearchFunction(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", citySearchFunction);
 
+function displayForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+
+  let forecastHTMl = "";
+
+  days.forEach(function (day) {
+    forecastHTMl =
+      forecastHTMl +
+      `<div class "weather-forecast">
+          <div class="weather-forecast-day">${day}</div>
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+                width="40px"
+              />
+
+              <div class="weather-forecast-temperatures">
+                <strong class="weather-forecast-max"> 12° </strong>
+                <span class="weather-forecast-min"> 10° </span>
+              </div>
+            </div>
+        `;
+  });
+
+  let weatherForecast = document.querySelector("#forecast");
+  weatherForecast.innerHTML = forecastHTMl;
+}
+
 searchCity("London");
+displayForecast();

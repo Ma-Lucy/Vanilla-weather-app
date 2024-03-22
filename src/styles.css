@@ -88,7 +88,9 @@ footer a {
   font-size: 25px;
 }
 .weather-forecast {
-  margin: 20px 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 25px 25px 25px;
 }
 .weather-forecast-day {
   margin-left: 5px;
@@ -97,7 +99,5 @@ footer a {
 }
 .weather-forecast-temperatures {
   font-size: 13px;
-}
-.weather-forecast-min {
-  color: darkgray;
+  color: #f65281;
 }
