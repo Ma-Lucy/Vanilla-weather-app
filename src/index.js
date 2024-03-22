@@ -63,31 +63,33 @@ function getForecast(city) {
 }
 
 function displayForecast(response) {
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
-
   let forecastHTMl = "";
 
-  days.forEach(function (day) {
-    forecastHTMl =
-      forecastHTMl +
-      `<div class "weather-forecast">
-          <div class="weather-forecast-day">${day}</div>
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHTMl =
+        forecastHTMl +
+        `<div class "weather-forecast">
+          <div class="weather-forecast-day">Mon</div>
               <img
-                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
-                width="40px"
+                src="${day.condition.icon_url}"
               />
 
               <div class="weather-forecast-temperatures">
-                <strong class="weather-forecast-max"> 12° </strong>
-                <span class="weather-forecast-min"> 10° </span>
+                <strong class="weather-forecast-max"> ${Math.round(
+                  day.temperature.maximum
+                )}° </strong>
+                <span class="weather-forecast-min"> ${Math.round(
+                  day.temperature.minimum
+                )}° </span>
               </div>
             </div>
         `;
+    }
   });
 
   let weatherForecast = document.querySelector("#forecast");
   weatherForecast.innerHTML = forecastHTMl;
 }
-
 searchCity("London");
 displayForecast();
