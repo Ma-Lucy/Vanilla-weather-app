@@ -20,6 +20,12 @@ function displayTemperatureFunction(response) {
   getForecast(response.data.city);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
 function dayFunction(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
@@ -70,7 +76,7 @@ function displayForecast(response) {
       forecastHTMl =
         forecastHTMl +
         `<div class "weather-forecast">
-          <div class="weather-forecast-day">Mon</div>
+          <div class="weather-forecast-day">${formatDay(day.time)}</div>
               <img
                 src="${day.condition.icon_url}"
               />
