@@ -1,5 +1,5 @@
 body {
-  background-color: #f9f7fd;
+  background: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
   font-family: "Roboto", sans-serif;
 }
 header {
@@ -14,7 +14,7 @@ footer {
   color: #27214266;
 }
 h1 {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 700;
   color: #272142;
   line-height: 48px;
@@ -24,11 +24,11 @@ p {
   color: #27214266;
 }
 footer a {
-  color: #885df1;
+  color: rgb(200, 91, 200);
 }
 .search-button:hover {
   cursor: pointer;
-  background-color: #906bed;
+  background-color: rgb(220, 120, 220);
 }
 .main-container {
   background-color: white;
@@ -40,7 +40,7 @@ footer a {
 }
 .input-search-text {
   border: none;
-  background-color: #f9f7fd;
+  background-color: #e7ecf9;
   width: 70%;
   margin: 15px;
   padding: 20px;
@@ -49,7 +49,7 @@ footer a {
   color: #27214266;
 }
 .search-button {
-  background-color: #885df1;
+  background-color: rgb(200, 91, 200);
   color: white;
   border: none;
   border-radius: 6px;
@@ -79,8 +79,8 @@ footer a {
   margin-left: 10px;
 }
 .emoji {
-  width: 88px;
-  height: 88px;
+  width: 100px;
+  height: 100px;
 }
 .degrees-unit {
   margin-top: 15px;
