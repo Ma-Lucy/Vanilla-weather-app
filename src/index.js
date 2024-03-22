@@ -16,6 +16,8 @@ function displayTemperatureFunction(response) {
   descriptionElement.innerHTML = response.data.condition.description;
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
+
+  displayForecast(response.data.city);
 }
 
 function dayFunction(date) {
@@ -53,10 +55,9 @@ function citySearchFunction(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", citySearchFunction);
 
-function getforecast(city) {
+function getForecast(city) {
   let apiKey = "6778eb30a3f8f38t710a50259f4eoc6f";
-  let apiUrl =
-    "https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apikey}&units=metric";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
   axios(apiUrl).then(displayForecast);
 }
 
@@ -88,4 +89,3 @@ function displayForecast(response) {
 }
 
 searchCity("London");
-displayForecast();
