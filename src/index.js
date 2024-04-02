@@ -80,7 +80,6 @@ function displayForecast(response) {
               <img
                 src="${day.condition.icon_url}"
               />
-
               <div class="weather-forecast-temperatures">
                 <strong class="weather-forecast-max"> ${Math.round(
                   day.temperature.maximum
